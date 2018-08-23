@@ -1,4 +1,4 @@
-# Firuta - A WEF filter collection for DFIR
+# Firuta - A WEF subscription collection for DFIR
 
 Even though there are a lot of amazing solutions for Security Monitoring, 
 it sometimes can be challenging to deploy / make use of them in an incident response
@@ -8,7 +8,7 @@ Windows Event Forwarding is free, available, easy to deploy (beside scaling Coll
 encrypted by default and provides a good foundation for basic Security Monitoring, 
 especially if combined with Sysmon.
 
-This repository contains collection of XPath filters for Windows Event Forwarding to detect possible badness
+This repository contains collection of subscriptions for Windows Event Forwarding to detect possible badness
 I compiled from multiple sources.
 
 In order to get you started, combine with Jessicas´s Weffles: https://aka.ms/weffles 
