@@ -1,4 +1,4 @@
-# Firuta - WEF filter collection for DFIR
+# Firuta - A WEF filter collection for DFIR
 
 Even though there are a lot of amazing solutions for Security Monitoring, 
 it sometimes can be challenging to deploy / make use of them in an incident response
