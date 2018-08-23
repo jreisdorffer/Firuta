@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Subscription xmlns="http://schemas.microsoft.com/2006/03/windows/events/subscription">
+	<SubscriptionId>LAPS Audit Events</SubscriptionId>
+	<SubscriptionType>SourceInitiated</SubscriptionType>
+	<Description>PFE - LAPS Audit Events</Description>
+	<Enabled>false</Enabled>
+	<Uri>http://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
+	<ConfigurationMode>Custom</ConfigurationMode>
+	<Delivery Mode="Push">
+		<Batching>
+			<MaxItems>1</MaxItems>
+			<MaxLatencyTime>1000</MaxLatencyTime>
+		</Batching>
+		<PushSettings>
+			<Heartbeat Interval="40000"/>
+		</PushSettings>
+	</Delivery>
+	<Query>
+		<![CDATA[
+
+<QueryList><Query Id="0" Path="Security"><Select Path="Security">*[System[EventID=4662]] and *[EventData[Data[@Name='SubjectUserSid'] !='S-1-5-18']] and *[EventData[Data[@Name='ObjectType'] and (Data='%{bf967a86-0de6-11d0-a285-00aa003049e2}')]] and *[EventData[Data[@Name='Properties'] and (Data='%%7684
+		{771727b1-31b8-4cdf-ae62-4fe39fadf89e}
+			{aa242f39-e8de-4a9e-8427-cbdfee01a917}
+			{c4a529bf-43b4-4876-b52f-778950eb4aeb}
+	{bf967a86-0de6-11d0-a285-00aa003049e2}
+')]]</Select></Query></QueryList>
+		
+		]]>
+	</Query>
+	<ReadExistingEvents>true</ReadExistingEvents>
+	<TransportName>HTTP</TransportName>
+	<ContentFormat>RenderedText</ContentFormat>
+	<Locale Language="en-US"/>
+	<LogFile>ForwardedEvents</LogFile>
+	<PublisherName>Microsoft-Windows-EventCollector</PublisherName>
+	<AllowedSourceNonDomainComputers></AllowedSourceNonDomainComputers>
+	<AllowedSourceDomainComputers>O:NSG:BAD:P(A;;GA;;;DD)S:</AllowedSourceDomainComputers>
+</Subscription>
