@@ -11,4 +11,10 @@ especially if combined with Sysmon.
 This repository contains collection of XPath filters for Windows Event Forwarding to detect possible badness
 I compiled from multiple sources.
 
+In order to get you started, combine with Jessicas´s Weffles: https://aka.ms/weffles 
+
 Feedback is very welcome! :-)
+
+Reach out at: https://twitter.com/jreisdorffer
+
+-Julien
